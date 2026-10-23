@@ -78,7 +78,7 @@ export const PRODUCTS: Product[] = [
     materialEn: 'Matte soft-touch woven textile',
     roomsAr: ['غرف الضيوف', 'غرف النوم', 'غرف الطعام'],
     roomsEn: ['Guest Rooms', 'Bedrooms', 'Dining Rooms'],
-    image: 'https://images.unsplash.com/photo-1505691938895-1758d7eaa511?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/aistudio/x0Lhn_426587a2.jpg',
   },
   {
     id: 'rb-4',
@@ -98,7 +98,7 @@ export const PRODUCTS: Product[] = [
     materialEn: 'Heavy-duty woven polyester',
     roomsAr: ['المجالس الحديثة', 'صالات الاستقبال', 'الفلل'],
     roomsEn: ['Modern Majlis', 'Reception Halls', 'Villas'],
-    image: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/aistudio/YjABF_e5b3ec65.jpg',
   },
   {
     id: 'rb-5',
@@ -118,7 +118,7 @@ export const PRODUCTS: Product[] = [
     materialEn: 'Advanced antibacterial thermal cloth',
     roomsAr: ['صالات الدوبلكس', 'الواجهات الزجاجية', 'صالات العرض'],
     roomsEn: ['Double-Height Lounges', 'Glass Facades', 'Showrooms'],
-    image: 'https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/aistudio/YjABF_e5b3ec65.jpg',
   },
   {
     id: 'rb-6',
@@ -138,7 +138,7 @@ export const PRODUCTS: Product[] = [
     materialEn: 'Treated aluminum or premium vinyl',
     roomsAr: ['المكاتب المنزلية', 'غرف الدراسة', 'العيادات'],
     roomsEn: ['Home Offices', 'Study Rooms', 'Clinics'],
-    image: 'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/aistudio/YjABF_e5b3ec65.jpg',
   },
   {
     id: 'rb-7',
@@ -158,7 +158,7 @@ export const PRODUCTS: Product[] = [
     materialEn: 'Anti-static oxidation-free slats',
     roomsAr: ['المكاتب التجارية', 'غرف الاجتماعات', 'صالات المعيشة'],
     roomsEn: ['Commercial Offices', 'Meeting Rooms', 'Living Lounges'],
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/aistudio/YjABF_e5b3ec65.jpg',
   },
   {
     id: 'rb-8',
@@ -178,7 +178,7 @@ export const PRODUCTS: Product[] = [
     materialEn: 'Curated Korean & European textiles',
     roomsAr: ['النوافذ المخصصة', 'غرف النوم الرئيسية', 'المجالس'],
     roomsEn: ['Custom Windows', 'Master Bedrooms', 'Majlis'],
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/aistudio/YjABF_e5b3ec65.jpg',
   },
   {
     id: 'rb-9',
@@ -198,7 +198,7 @@ export const PRODUCTS: Product[] = [
     materialEn: 'Premium multi-ply jacquard weave',
     roomsAr: ['المجالس الملكية', 'غرف الضيافة', 'الصالونات'],
     roomsEn: ['Royal Majlis', 'Guest Salons', 'Formal Living'],
-    image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/aistudio/YjABF_e5b3ec65.jpg',
   },
   {
     id: 'rb-10',
@@ -218,7 +218,7 @@ export const PRODUCTS: Product[] = [
     materialEn: 'Multi-layer composite optic weave',
     roomsAr: ['صالات الاستقبال الحديثة', 'المكاتب الفاخرة', 'غرف النوم العصرية'],
     roomsEn: ['Modern Lounges', 'Luxury Offices', 'Chic Bedrooms'],
-    image: 'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/aistudio/YjABF_e5b3ec65.jpg',
   },
   {
     id: 'rb-12',
@@ -238,7 +238,7 @@ export const PRODUCTS: Product[] = [
     materialEn: 'Multi-ply blackout insulation fabric',
     roomsAr: ['الصالات المفتوحة', 'الفلل المودرن', 'الواجهات الكبيرة'],
     roomsEn: ['Open Atriums', 'Modern Villas', 'High-Ceiling Halls'],
-    image: 'https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/aistudio/YjABF_e5b3ec65.jpg',
   },
   {
     id: 'rb-13',
@@ -258,7 +258,7 @@ export const PRODUCTS: Product[] = [
     materialEn: 'Ultra-dense Turkish luxury textile',
     roomsAr: ['غرف النوم الرئيسية', 'المجالس الفخمة', 'أجنحة الضيافة'],
     roomsEn: ['Master Bedrooms', 'Prestigious Majlis', 'Guest Suites'],
-    image: 'https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/aistudio/YjABF_e5b3ec65.jpg',
   },
   {
     id: 'rb-14',
@@ -278,7 +278,7 @@ export const PRODUCTS: Product[] = [
     materialEn: 'High-grade polyester & sheer voiles',
     roomsAr: ['غرف النوم', 'غرف الجلوس', 'المكاتب'],
     roomsEn: ['Bedrooms', 'Sitting Rooms', 'Offices'],
-    image: 'https://images.unsplash.com/photo-1620786273731-89332e4d093a?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/aistudio/YjABF_e5b3ec65.jpg',
   },
   {
     id: 'rb-15',
@@ -298,7 +298,7 @@ export const PRODUCTS: Product[] = [
     materialEn: 'Dual-tone UV-blocking polyester',
     roomsAr: ['صالات المعيشة', 'المكاتب الإدارية', 'غرف النوم'],
     roomsEn: ['Living Rooms', 'Executive Offices', 'Bedrooms'],
-    image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/aistudio/YjABF_e5b3ec65.jpg',
   },
   {
     id: 'rb-16',
@@ -318,7 +318,7 @@ export const PRODUCTS: Product[] = [
     materialEn: 'Treated aluminum or non-porous vinyl',
     roomsAr: ['المطابخ الرئيسية', 'المطابخ التحضيرية', 'مناطق الغسيل'],
     roomsEn: ['Main Kitchens', 'Prep Pantries', 'Laundry Areas'],
-    image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/aistudio/YjABF_e5b3ec65.jpg',
   },
   {
     id: 'rb-17',
@@ -338,7 +338,7 @@ export const PRODUCTS: Product[] = [
     materialEn: 'Engineered fabric vanes or heavy-duty PVC',
     roomsAr: ['أبواب الحدائق والممرات', 'الصالات المفتوحة', 'المكاتب والشركات'],
     roomsEn: ['Patio Sliding Doors', 'Open Halls', 'Corporate Suites'],
-    image: 'https://images.unsplash.com/photo-1502005229762-ee1b2da97e06?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/aistudio/YjABF_e5b3ec65.jpg',
   },
   {
     id: 'rb-18',
@@ -358,7 +358,7 @@ export const PRODUCTS: Product[] = [
     materialEn: 'Vinyl-coated solar fiberglass core',
     roomsAr: ['النوافذ المواجهة للشمس المباشرة', 'المكاتب', 'صالات الجلوس'],
     roomsEn: ['Sun-facing Windows', 'Workspaces', 'Living Lounges'],
-    image: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/aistudio/YjABF_e5b3ec65.jpg',
   },
   {
     id: 'rb-19',
@@ -378,7 +378,7 @@ export const PRODUCTS: Product[] = [
     materialEn: 'Signature Higo luxury composite weave',
     roomsAr: ['الأجنحة الفاخرة', 'المجالس الرسمية', 'غرف النوم الراقية'],
     roomsEn: ['Luxury Suites', 'Formal Majlis', 'High-End Bedrooms'],
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/aistudio/YjABF_e5b3ec65.jpg',
   },
   {
     id: 'rb-20',
@@ -398,7 +398,7 @@ export const PRODUCTS: Product[] = [
     materialEn: 'Engineered light-diffusing translucent membrane',
     roomsAr: ['غرف المعيشة', 'استوديوهات العمل', 'غرف القراءة'],
     roomsEn: ['Living Rooms', 'Creative Studios', 'Reading Lounges'],
-    image: 'https://images.unsplash.com/photo-1616486341353-c91ff3b10e51?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/aistudio/YjABF_e5b3ec65.jpg',
   },
   {
     id: 'rb-21',
@@ -418,6 +418,6 @@ export const PRODUCTS: Product[] = [
     materialEn: 'High-density blackout membrane',
     roomsAr: ['النوافذ الطولية', 'الممرات', 'غرف النوم الحديثة'],
     roomsEn: ['Tall Narrow Windows', 'Hallways', 'Modern Bedrooms'],
-    image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80',
+    image: '/assets/aistudio/YjABF_e5b3ec65.jpg',
   },
 ];

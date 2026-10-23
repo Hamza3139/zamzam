@@ -3,7 +3,6 @@ import { useLanguage } from '../context/LanguageContext';
 import { PRODUCTS, Product } from '../data/products';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
-  MessageCircle, 
   Search, 
   SlidersHorizontal, 
   Eye, 
@@ -14,6 +13,8 @@ import {
   Sparkles,
   Image as ImageIcon
 } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
+import { getAssetUrl } from '../utils/assets';
 
 const Collections: React.FC = () => {
   const { t, lang } = useLanguage();
@@ -186,7 +187,7 @@ const Collections: React.FC = () => {
                 {/* Image Section - Fully visible, uncropped with clean stage */}
                 <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-gradient-to-b from-[#FBFBFA] via-[#F6F5F2] to-[#ECEAE4] p-3 flex items-center justify-center border-b border-ink/5">
                   <img
-                    src={product.image}
+                    src={getAssetUrl(product.image)}
                     alt={lang === 'ar' ? product.nameAr : product.nameEn}
                     referrerPolicy="no-referrer"
                     className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.03] drop-shadow-sm"
@@ -258,7 +259,7 @@ const Collections: React.FC = () => {
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-1.5 rounded-xl bg-[#25D366] py-2.5 text-xs font-bold text-white shadow transition-all hover:bg-[#1EBE5D] hover:shadow-md"
                     >
-                      <MessageCircle size={14} />
+                      <WhatsAppIcon size={15} />
                       <span>{lang === 'ar' ? 'استفسار' : 'Inquire'}</span>
                     </a>
                   </div>
@@ -307,7 +308,7 @@ const Collections: React.FC = () => {
               {/* Modal Full Product Showcase Stage - 100% visible */}
               <div className="relative h-72 sm:h-96 w-full overflow-hidden bg-gradient-to-b from-[#FAF9F5] via-[#F4F2EC] to-[#ECE9E0] p-6 flex items-center justify-center border-b border-ink/10">
                 <img
-                  src={activeProduct.image}
+                  src={getAssetUrl(activeProduct.image)}
                   alt={lang === 'ar' ? activeProduct.nameAr : activeProduct.nameEn}
                   referrerPolicy="no-referrer"
                   className="max-h-full max-w-full object-contain drop-shadow-md transition-transform duration-300"
@@ -396,7 +397,7 @@ const Collections: React.FC = () => {
                     rel="noopener noreferrer"
                     className="flex-1 flex items-center justify-center gap-2 rounded-2xl bg-[#25D366] px-6 py-3.5 text-sm font-bold text-white shadow-lg transition-transform hover:scale-[1.02] hover:bg-[#1EBE5D]"
                   >
-                    <MessageCircle size={18} />
+                    <WhatsAppIcon size={19} />
                     <span>{t('btn_inquire_whatsapp')}</span>
                   </a>
                   <button
@@ -448,7 +449,7 @@ const Collections: React.FC = () => {
 
               <div className="overflow-hidden rounded-2xl border border-ink/10 bg-neutral/30">
                 <img
-                  src="/assets/aistudio/image_7bbced9e.png"
+                  src={getAssetUrl('/assets/aistudio/image_7bbced9e.png')}
                   alt="Certified 20 Products Reference"
                   className="w-full object-contain"
                 />

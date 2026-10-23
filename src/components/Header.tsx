@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Menu, X, Globe, MessageCircle } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 const Header: React.FC = () => {
   const { lang, setLang, t } = useLanguage();
@@ -70,9 +71,9 @@ const Header: React.FC = () => {
               href="https://wa.me/966581544819"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-white shadow-lg transition-transform hover:scale-105"
+              className="flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-2.5 text-sm font-bold text-white shadow-lg transition-transform hover:scale-105 hover:bg-[#1EBE5D]"
             >
-              <MessageCircle size={18} />
+              <WhatsAppIcon size={18} />
               {t('cta_whatsapp')}
             </a>
           </nav>
@@ -121,9 +122,9 @@ const Header: React.FC = () => {
                 href="https://wa.me/966581544819"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 flex items-center justify-center gap-2 rounded-full bg-primary py-4 text-lg font-bold text-white"
+                className="mt-4 flex items-center justify-center gap-2 rounded-full bg-[#25D366] py-4 text-lg font-bold text-white hover:bg-[#1EBE5D]"
               >
-                <MessageCircle size={20} />
+                <WhatsAppIcon size={22} />
                 {t('cta_whatsapp')}
               </a>
             </div>

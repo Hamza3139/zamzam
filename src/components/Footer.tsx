@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Instagram, Twitter, MessageCircle } from 'lucide-react';
+import { Instagram, Twitter } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 const Footer: React.FC = () => {
   const { t, lang } = useLanguage();
@@ -38,8 +39,8 @@ const Footer: React.FC = () => {
                 <a href="https://www.instagram.com/maarazzamzam/?__pwa=1" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 transition-colors hover:bg-white/10 hover:text-secondary">
                   <Instagram size={20} />
                 </a>
-                <a href="https://wa.me/966581544819" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 transition-colors hover:bg-white/10 hover:text-secondary">
-                  <MessageCircle size={20} />
+                <a href="https://wa.me/966581544819" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 transition-colors hover:bg-white/10 hover:text-[#25D366]">
+                  <WhatsAppIcon size={20} />
                 </a>
                 <a href="https://www.facebook.com/share/17kbQ6RY5Q/" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 transition-colors hover:bg-white/10 hover:text-secondary">
                   <span className="font-bold">f</span>
