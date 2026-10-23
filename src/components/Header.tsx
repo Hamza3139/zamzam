@@ -13,7 +13,7 @@ const Header: React.FC = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -28,32 +28,47 @@ const Header: React.FC = () => {
     setLang(lang === 'ar' ? 'en' : 'ar');
   };
 
+  const isLightHeader = isScrolled || isMenuOpen;
+
   return (
     <header 
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'
+        isLightHeader 
+          ? 'bg-white/95 backdrop-blur-md shadow-md py-3' 
+          : 'bg-primary/40 backdrop-blur-sm py-4 sm:py-5'
       }`}
       id="main-header"
     >
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-secondary">
-              <span className="font-serif text-2xl font-bold">Z</span>
+          <a href="#home" className="flex items-center gap-2 sm:gap-2.5">
+            <div className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-lg bg-primary text-secondary shadow-sm">
+              <span className="font-serif text-xl sm:text-2xl font-bold">Z</span>
             </div>
-            <span className={`font-serif text-xl font-bold tracking-tight md:text-2xl ${isScrolled ? 'text-primary' : 'text-primary'}`}>
-              معرض زمزم للستائر
-            </span>
-          </div>
+            <div className="flex flex-col">
+              <span className={`font-serif text-lg sm:text-xl md:text-2xl font-bold tracking-tight leading-tight ${
+                isLightHeader ? 'text-primary' : 'text-white'
+              }`}>
+                معرض زمزم للستائر
+              </span>
+              <span className={`text-[10px] font-sans tracking-widest uppercase hidden sm:block ${
+                isLightHeader ? 'text-ink/60' : 'text-white/70'
+              }`}>
+                Buraydah • Al Qassim
+              </span>
+            </div>
+          </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden items-center gap-8 lg:flex">
+          <nav className="hidden items-center gap-6 xl:gap-8 lg:flex">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="font-sans text-sm font-medium text-ink/80 transition-colors hover:text-secondary"
+                className={`font-sans text-sm font-medium transition-colors hover:text-secondary ${
+                  isLightHeader ? 'text-ink/80' : 'text-white/90'
+                }`}
               >
                 {link.name}
               </a>
@@ -61,38 +76,50 @@ const Header: React.FC = () => {
             
             <button 
               onClick={toggleLang}
-              className="flex items-center gap-2 rounded-full border border-ink/10 px-3 py-1 text-sm font-medium transition-all hover:bg-ink/5"
+              className={`flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-all ${
+                isLightHeader 
+                  ? 'border-ink/15 text-primary hover:bg-neutral' 
+                  : 'border-white/30 text-white hover:bg-white/10'
+              }`}
             >
-              <Globe size={16} />
-              {lang === 'ar' ? 'English' : 'العربية'}
+              <Globe size={15} />
+              <span>{lang === 'ar' ? 'English' : 'العربية'}</span>
             </button>
 
             <a
               href="https://wa.me/966581544819"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-2.5 text-sm font-bold text-white shadow-lg transition-transform hover:scale-105 hover:bg-[#1EBE5D]"
+              className="flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2 text-xs font-bold text-white shadow-md transition-transform hover:scale-105 hover:bg-[#1EBE5D]"
             >
-              <WhatsAppIcon size={18} />
-              {t('cta_whatsapp')}
+              <WhatsAppIcon size={16} />
+              <span>{t('cta_whatsapp')}</span>
             </a>
           </nav>
 
-          {/* Mobile Menu Toggle */}
-          <div className="flex items-center gap-4 lg:hidden">
+          {/* Mobile Actions */}
+          <div className="flex items-center gap-2 lg:hidden">
             <button 
               onClick={toggleLang}
-              className="p-2 text-primary"
+              className={`flex items-center gap-1 rounded-full border px-2.5 py-1 text-xs font-bold transition-all ${
+                isLightHeader 
+                  ? 'border-ink/15 text-primary bg-neutral/50' 
+                  : 'border-white/30 text-white bg-white/10'
+              }`}
               aria-label="Toggle Language"
             >
-              <Globe size={20} />
+              <Globe size={14} />
+              <span>{lang === 'ar' ? 'EN' : 'عربي'}</span>
             </button>
+
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 text-primary"
+              className={`p-2 rounded-lg transition-colors ${
+                isLightHeader ? 'text-primary hover:bg-neutral' : 'text-white hover:bg-white/10'
+              }`}
               aria-label="Toggle Menu"
             >
-              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
@@ -102,31 +129,37 @@ const Header: React.FC = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="absolute left-0 top-full w-full bg-white shadow-xl lg:hidden"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden border-t border-ink/10 bg-white shadow-2xl lg:hidden"
           >
-            <div className="flex flex-col p-6 gap-4">
+            <div className="container mx-auto px-4 py-6 flex flex-col gap-2">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="font-sans text-lg font-medium text-ink border-b border-neutral py-2"
+                  className="flex items-center justify-between rounded-xl px-4 py-3 font-sans text-base font-bold text-primary transition-colors hover:bg-neutral active:bg-neutral"
                 >
-                  {link.name}
+                  <span>{link.name}</span>
+                  <span className="text-xs text-ink/30">→</span>
                 </a>
               ))}
-              <a
-                href="https://wa.me/966581544819"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 flex items-center justify-center gap-2 rounded-full bg-[#25D366] py-4 text-lg font-bold text-white hover:bg-[#1EBE5D]"
-              >
-                <WhatsAppIcon size={22} />
-                {t('cta_whatsapp')}
-              </a>
+
+              <div className="pt-2 border-t border-ink/10 mt-2">
+                <a
+                  href="https://wa.me/966581544819"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="flex w-full items-center justify-center gap-2 rounded-2xl bg-[#25D366] py-3.5 text-base font-bold text-white shadow-lg active:scale-[0.98] transition-transform"
+                >
+                  <WhatsAppIcon size={20} />
+                  <span>{t('cta_whatsapp')}</span>
+                </a>
+              </div>
             </div>
           </motion.div>
         )}
