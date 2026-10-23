@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" width="1000" height="800">
+  <defs>
+    <!-- Background wall gradient -->
+    <linearGradient id="wallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FAFAFA"/>
+      <stop offset="50%" stop-color="#F5F5F5"/>
+      <stop offset="100%" stop-color="#ECECEC"/>
+    </linearGradient>
+
+    <!-- Roller Cassette / Tube gradients -->
+    <linearGradient id="cassetteGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="25%" stop-color="#F0F0F0"/>
+      <stop offset="70%" stop-color="#DCDCDC"/>
+      <stop offset="100%" stop-color="#BEBEBE"/>
+    </linearGradient>
+
+    <linearGradient id="capGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#E2E2E2"/>
+      <stop offset="100%" stop-color="#B8B8B8"/>
+    </linearGradient>
+
+    <!-- Fabric body gradient for realistic lighting -->
+    <linearGradient id="fabricGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FDFDFD"/>
+      <stop offset="3%" stop-color="#F5F4F0"/>
+      <stop offset="50%" stop-color="#EFEFEA"/>
+      <stop offset="97%" stop-color="#E8E7E0"/>
+      <stop offset="100%" stop-color="#DFDED6"/>
+    </linearGradient>
+
+    <!-- Bottom Weighted Bar gradient -->
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="40%" stop-color="#EDEDED"/>
+      <stop offset="80%" stop-color="#D5D5D5"/>
+      <stop offset="100%" stop-color="#BBBBBB"/>
+    </linearGradient>
+
+    <!-- Soft drop shadow for realistic blind hang -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#000000" flood-opacity="0.12"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+
+    <filter id="barShadow" x="-10%" y="-30%" width="120%" height="200%">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#000000" flood-opacity="0.16"/>
+    </filter>
+
+    <!-- Fine textile weave texture -->
+    <pattern id="linenWeave" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect width="6" height="6" fill="#F4F3EE"/>
+      <line x1="0" y1="3" x2="6" y2="3" stroke="#E6E5DE" stroke-width="0.8"/>
+      <line x1="3" y1="0" x2="3" y2="6" stroke="#E2E0D8" stroke-width="0.8"/>
+    </pattern>
+
+    <pattern id="verticalRibs" width="8" height="800" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="800" stroke="#000000" stroke-opacity="0.02" stroke-width="1"/>
+      <line x1="4" y1="0" x2="4" y2="800" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Wall Background -->
+  <rect width="1000" height="800" fill="url(#wallGrad)"/>
+
+  <!-- Blind Shadow Group -->
+  <g filter="url(#softShadow)">
+    <!-- Main Wide Fabric (300 wide by 200 drop proportions: 720px width x 480px height = exactly 3:2 ratio) -->
+    <rect x="140" y="148" width="720" height="480" fill="url(#fabricGrad)" rx="1"/>
+  </g>
+
+  <!-- Main Fabric Fill with Subtle Linen Weave -->
+  <rect x="140" y="148" width="720" height="480" fill="url(#linenWeave)" opacity="0.65"/>
+  <rect x="140" y="148" width="720" height="480" fill="url(#verticalRibs)"/>
+
+  <!-- Left and right subtle fold edge shadow -->
+  <linearGradient id="edgeShadowL" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#000000" stop-opacity="0.05"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+  </linearGradient>
+  <rect x="140" y="148" width="16" height="480" fill="url(#edgeShadowL)"/>
+
+  <linearGradient id="edgeShadowR" x1="100%" y1="0%" x2="0%" y2="0%">
+    <stop offset="0%" stop-color="#000000" stop-opacity="0.05"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+  </linearGradient>
+  <rect x="844" y="148" width="16" height="480" fill="url(#edgeShadowR)"/>
+
+  <!-- Top Cassette Tube & Mounting brackets (Wide 300cm representation) -->
+  <g filter="url(#softShadow)">
+    <!-- Main cylindrical tube -->
+    <rect x="130" y="118" width="740" height="34" rx="6" fill="url(#cassetteGrad)"/>
+    <line x1="130" y1="120" x2="870" y2="120" stroke="#FFFFFF" stroke-width="1.5" opacity="0.8"/>
+    <line x1="130" y1="150" x2="870" y2="150" stroke="#AAAAAA" stroke-width="1" opacity="0.5"/>
+
+    <!-- Left Mounting Bracket / End Cap -->
+    <rect x="118" y="112" width="18" height="46" rx="4" fill="url(#capGrad)" stroke="#B0B0B0" stroke-width="0.75"/>
+    <circle cx="127" cy="135" r="3.5" fill="#999999"/>
+
+    <!-- Right Mounting Bracket / End Cap with clutch chain detail -->
+    <rect x="864" y="112" width="18" height="46" rx="4" fill="url(#capGrad)" stroke="#B0B0B0" stroke-width="0.75"/>
+    <circle cx="873" cy="135" r="3.5" fill="#999999"/>
+  </g>
+
+  <!-- Bottom Weighted Hem Bar (with realistic shadow) -->
+  <g filter="url(#barShadow)">
+    <rect x="138" y="624" width="724" height="20" rx="3" fill="url(#barGrad)"/>
+    <line x1="138" y1="626" x2="862" y2="626" stroke="#FFFFFF" stroke-width="1.2" opacity="0.9"/>
+    <line x1="138" y1="643" x2="862" y2="643" stroke="#A5A5A5" stroke-width="1" opacity="0.7"/>
+
+    <!-- End caps of bottom bar -->
+    <rect x="136" y="623" width="5" height="22" rx="1.5" fill="#C8C8C8"/>
+    <rect x="859" y="623" width="5" height="22" rx="1.5" fill="#C8C8C8"/>
+  </g>
+
+  <!-- Pull Chain (Right side, modern ball chain) -->
+  <g opacity="0.5">
+    <line x1="880" y1="140" x2="880" y2="460" stroke="#888888" stroke-width="1.5" stroke-dasharray="2,3"/>
+    <line x1="883" y1="140" x2="883" y2="460" stroke="#777777" stroke-width="1.5" stroke-dasharray="2,3"/>
+    <ellipse cx="881.5" cy="460" rx="3.5" ry="5" fill="#777777"/>
+  </g>
+
+  <!-- Architectural Scale / Dimension Callout (Matching the 200x150 studio style in bottom right) -->
+  <g transform="translate(680, 680)">
+    <!-- Horizontal Dimension Line -->
+    <line x1="0" y1="0" x2="220" y2="0" stroke="#8A8A8A" stroke-width="1.2"/>
+    <!-- Left vertical tick -->
+    <line x1="0" y1="-7" x2="0" y2="7" stroke="#8A8A8A" stroke-width="1.2"/>
+    <!-- Right vertical tick -->
+    <line x1="220" y1="-7" x2="220" y2="7" stroke="#8A8A8A" stroke-width="1.2"/>
+
+    <!-- Dimension Label -->
+    <text x="110" y="24" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#5A5A5A" letter-spacing="0.5">
+      300 × 200 cm
+    </text>
+
+    <!-- Vertical Tick Measurement Scale Indicator -->
+    <g transform="translate(110, 36)" stroke="#8A8A8A" stroke-width="0.8">
+      <line x1="0" y1="0" x2="0" y2="60" stroke-width="0.8"/>
+      <line x1="-10" y1="6" x2="10" y2="6"/>
+      <line x1="-5" y1="12" x2="5" y2="12"/>
+      <line x1="-5" y1="18" x2="5" y2="18"/>
+      <line x1="-8" y1="24" x2="8" y2="24"/>
+      <line x1="-5" y1="30" x2="5" y2="30"/>
+      <line x1="-5" y1="36" x2="5" y2="36"/>
+      <line x1="-8" y1="42" x2="8" y2="42"/>
+      <line x1="-5" y1="48" x2="5" y2="48"/>
+      <line x1="-10" y1="54" x2="10" y2="54"/>
+    </g>
+  </g>
+</svg>

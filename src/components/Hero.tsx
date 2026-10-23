@@ -11,8 +11,9 @@ const Hero: React.FC = () => {
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1600585152220-901614791cd1?auto=format&fit=crop&q=80&w=2070" 
+          src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2070" 
           alt="Luxury Roller Blinds"
+          referrerPolicy="no-referrer"
           className="h-full w-full object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"></div>
