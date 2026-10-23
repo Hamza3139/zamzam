@@ -2,23 +2,21 @@ import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Instagram } from 'lucide-react';
 import { WhatsAppIcon } from './WhatsAppIcon';
+import Logo from './Logo';
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-primary pt-14 pb-28 sm:pb-12 text-white">
+    <footer className="bg-primary pt-16 pb-28 sm:pb-12 text-white border-t border-secondary/20">
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
         <div className="flex flex-col items-center justify-between gap-8 border-b border-white/10 pb-12 sm:pb-16 md:flex-row md:items-start">
-          {/* Brand Info */}
-          <div className="max-w-xs text-center md:text-right">
-            <div className="mb-4 flex items-center justify-center gap-2 md:justify-start">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white text-primary">
-                <span className="font-serif text-xl font-bold">Z</span>
-              </div>
-              <span className="font-serif text-xl font-bold tracking-tight">معرض زمزم للستائر</span>
+          {/* High-End Brand Logo & About */}
+          <div className="max-w-sm text-center md:text-right">
+            <div className="mb-4 flex items-center justify-center md:justify-start">
+              <Logo size="lg" variant="dark" />
             </div>
-            <p className="text-xs sm:text-sm leading-relaxed text-white/60">
+            <p className="text-xs sm:text-sm leading-relaxed text-white/65 mt-3">
               {t('hero_subtitle')}
             </p>
           </div>
@@ -42,7 +40,7 @@ const Footer: React.FC = () => {
                   href="https://www.instagram.com/maarazzamzam/?__pwa=1" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 transition-colors hover:bg-white/10 hover:text-secondary"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 transition-colors hover:bg-white/10 hover:text-secondary border border-white/10"
                   aria-label="Instagram"
                 >
                   <Instagram size={18} />
@@ -51,7 +49,7 @@ const Footer: React.FC = () => {
                   href="https://wa.me/966581544819" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 transition-colors hover:bg-white/10 hover:text-[#25D366]"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 transition-colors hover:bg-white/10 hover:text-[#25D366] border border-white/10"
                   aria-label="WhatsApp"
                 >
                   <WhatsAppIcon size={18} />
@@ -60,7 +58,7 @@ const Footer: React.FC = () => {
                   href="https://www.facebook.com/share/17kbQ6RY5Q/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 transition-colors hover:bg-white/10 hover:text-secondary font-bold text-sm"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 transition-colors hover:bg-white/10 hover:text-secondary font-bold text-sm border border-white/10"
                   aria-label="Facebook"
                 >
                   f

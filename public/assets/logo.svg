@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <!-- Metallic Gold Gradient -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBF2DB" />
+      <stop offset="25%" stop-color="#E2C167" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="75%" stop-color="#B8860B" />
+      <stop offset="100%" stop-color="#8F6209" />
+    </linearGradient>
+
+    <!-- Deep Navy Metallic Gradient -->
+    <linearGradient id="navyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08234D" />
+      <stop offset="50%" stop-color="#001738" />
+      <stop offset="100%" stop-color="#000E24" />
+    </linearGradient>
+
+    <!-- Subtle Drop Shadow -->
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#D4AF37" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Luxury Squircle Badge Base -->
+  <rect x="4" y="4" width="112" height="112" rx="28" fill="url(#navyGradient)" stroke="url(#goldGradient)" stroke-width="2.5" />
+
+  <!-- Subtle Architectural Window Blind Framework Arch -->
+  <path d="M 22 40 C 22 24, 98 24, 98 40 L 98 96 C 98 98, 96 100, 94 100 L 26 100 C 24 100, 22 98, 22 96 Z" fill="none" stroke="url(#goldGradient)" stroke-width="0.75" stroke-opacity="0.35" stroke-dasharray="2 3" />
+
+  <!-- Central Monogram "Z" Formed by Architectural Window Blind Slats -->
+  <!-- 1. Top Blind Headrail -->
+  <rect x="25" y="27" width="70" height="7.5" rx="3.75" fill="url(#goldGradient)" filter="url(#goldGlow)" />
+
+  <!-- 2. Descending Diagonal Louvres / Curtain Cascade Slats -->
+  <!-- Louvre Slat 1 -->
+  <path d="M 86 39 L 68 53 L 57 53 L 75 39 Z" fill="url(#goldGradient)" opacity="0.95" />
+  
+  <!-- Louvre Slat 2 (Center Core) -->
+  <path d="M 72 52 L 48 70 L 37 70 L 61 52 Z" fill="url(#goldGradient)" opacity="0.9" />
+
+  <!-- Louvre Slat 3 (Base Connection) -->
+  <path d="M 52 68 L 34 82 L 25 82 L 43 68 Z" fill="url(#goldGradient)" opacity="0.85" />
+
+  <!-- 3. Bottom Weighted Louvre Bar -->
+  <rect x="25" y="85.5" width="70" height="7.5" rx="3.75" fill="url(#goldGradient)" filter="url(#goldGlow)" />
+
+  <!-- Central Luxury Diamond Accent -->
+  <polygon points="60,56 63.5,60 60,64 56.5,60" fill="#FFFFFF" opacity="0.95" />
+</svg>

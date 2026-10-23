@@ -3,6 +3,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { Menu, X, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { WhatsAppIcon } from './WhatsAppIcon';
+import Logo from './Logo';
 
 const Header: React.FC = () => {
   const { lang, setLang, t } = useLanguage();
@@ -35,29 +36,15 @@ const Header: React.FC = () => {
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
         isLightHeader 
           ? 'bg-white/95 backdrop-blur-md shadow-md py-3' 
-          : 'bg-primary/40 backdrop-blur-sm py-4 sm:py-5'
+          : 'bg-primary/50 backdrop-blur-sm py-3.5 sm:py-4.5'
       }`}
       id="main-header"
     >
-      <div className="container mx-auto px-4 sm:px-6">
+      <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="#home" className="flex items-center gap-2 sm:gap-2.5">
-            <div className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-lg bg-primary text-secondary shadow-sm">
-              <span className="font-serif text-xl sm:text-2xl font-bold">Z</span>
-            </div>
-            <div className="flex flex-col">
-              <span className={`font-serif text-lg sm:text-xl md:text-2xl font-bold tracking-tight leading-tight ${
-                isLightHeader ? 'text-primary' : 'text-white'
-              }`}>
-                معرض زمزم للستائر
-              </span>
-              <span className={`text-[10px] font-sans tracking-widest uppercase hidden sm:block ${
-                isLightHeader ? 'text-ink/60' : 'text-white/70'
-              }`}>
-                Buraydah • Al Qassim
-              </span>
-            </div>
+          {/* High-End Brand Logo */}
+          <a href="#home" className="transition-transform hover:scale-[1.02] active:scale-95">
+            <Logo size="md" variant={isLightHeader ? 'light' : 'dark'} />
           </a>
 
           {/* Desktop Nav */}
@@ -66,7 +53,7 @@ const Header: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className={`font-sans text-sm font-medium transition-colors hover:text-secondary ${
+                className={`font-sans text-sm font-semibold transition-colors hover:text-secondary ${
                   isLightHeader ? 'text-ink/80' : 'text-white/90'
                 }`}
               >
